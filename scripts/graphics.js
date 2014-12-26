@@ -16,6 +16,21 @@ window.VYW = window.VYW || {};
 		return new Point(this.x,  this.y);
 	};
 
+	function Rectangle(x, y, width, height) {
+		this.x = x;
+		this.y = y;
+		this.width = width;
+		this.height = height;
+	}
+
+	Rectangle.prototype.clone = function() {
+		return new Rectangle(this.x,  this.y, this.width, this.height);
+	};
+
+	Rectangle.prototype.equlas = function(dst) {
+		return this.x === dst.x && this.y === dst.y && this.width === dst.width && this.height === dst.height;
+	};
+
 	/**
 	 * Creates a new Graphics instance
 	 * @param {object} canvas - An HTML Canvas element
@@ -39,19 +54,18 @@ window.VYW = window.VYW || {};
 
 	/**
 	 * Draws a rectangle filled with color
-	 * @param {Point} point - The rectangle upper left corner
-	 * @param {number} width - The rectangle width
-	 * @param {number} height - The rectangle height
+	 * @param {Rectangle} rect - The rectangle to fill
 	 * @param {string} [color='#000000'] - The rectangle color
 	 */
-	Graphics.prototype.fillRectangle = function(point, width, height, color) {
+	Graphics.prototype.fillRectangle = function(rect, color) {
 		this.context.beginPath();
-		this.context.rect(point.x, point.y, width, height);
+		this.context.rect(rect.x, rect.y, rect.width, rect.height);
 		this.context.fillStyle = color || '#000000';
 		this.context.fill();
 	};
 
 	VYW.Graphics = Graphics;
 	VYW.Point = Point;
+	VYW.Rectangle = Rectangle;
 
 }(window.VYW));
