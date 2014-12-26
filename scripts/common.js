@@ -1,12 +1,21 @@
 window.VYW = window.VYW || {};
 (function(VYW) {
+	/**
+	 * Define some enums and common classes/utils
+	 */
 
+	/**
+	 * A game state enum
+	 */
 	VYW.GameState = {
 		Paused: 0,
 		Running: 1,
 		End: 2
 	};
 
+	/**
+	 * Keyboard key codes enum
+	 */
 	VYW.KeyCodes = {
 		Pause: 32,
 		Left: 37,
@@ -15,6 +24,9 @@ window.VYW = window.VYW || {};
 		Down: 40
 	};
 
+	/**
+	 * Snake direction enum
+	 */
 	VYW.Direction = {
 		Left: 0,
 		Up: 1,
@@ -22,6 +34,11 @@ window.VYW = window.VYW || {};
 		Down: 3
 	};
 
+	/**
+	 * The game settings class
+	 * @param {object} settings - An object with initial game settings
+	 * @constructor
+	 */
 	VYW.GameSettings = function(settings) {
 		settings = typeof settings === 'object' && settings !== null ? settings : {};
 

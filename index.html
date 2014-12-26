@@ -9,18 +9,14 @@
 	<script type="text/javascript" src="./scripts/graphics.js"></script>
     <script type="text/javascript" src="./scripts/snake-part.js"></script>
 	<script type="text/javascript" src="./scripts/pellet.js"></script>
-	<script type="text/javascript" src="./scripts/main.js"></script>
+	<script type="text/javascript" src="scripts/snake-engine.js"></script>
 
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
-
-            var game = new VYW.SnakeEngine(document.getElementById('boardPane'));
+            // Create the game and start it
+	        var game = new VYW.SnakeEngine(document.getElementById('boardPane'));
             game.start();
-
-
-
         });
-
 
     </script>
 
