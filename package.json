@@ -1,0 +1,24 @@
+{
+  "name": "Snake",
+  "version": "0.0.1",
+  "description": "Good old snake game",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ValYouW/snake.git"
+  },
+  "author": "ValYouW",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ValYouW/snake/issues"
+  },
+  "homepage": "https://github.com/ValYouW/snake",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.0"
+  }
+}
